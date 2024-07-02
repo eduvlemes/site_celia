@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Célia Rodrigues - Psicóloga - CRP 06/120860 - Agende sua Sessão</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Mulish:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- Font Awesome 4.7.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("TSw19jn_ji5sPWa35"); // Substitua "YOUR_USER_ID" pelo seu user ID do EmailJS
+        })();
+    </script>
+   
+    <style>
+      header{
+        position: sticky;
+        top: 0;
+        background: #fff;
+        box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+      }
+        body {
+            font-family: 'Mulish', sans-serif;
+            color: #333;
+        }
+
+        h1, .h1 {
+            font-family: 'EB Garamond', serif;
+            font-size: 67.78px;
+            
+        }
+
+        h2,.h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: 67.78px;
+            
+        }
+
+        h3 ,.h3{
+            font-size: 33.18px;
+            
+        }
+
+        h4,.h4 {
+            font-size: 27.65px;
+            
+        }
+
+        h5,.h5 {
+            font-size: 23.04px;
+            
+        }
+
+        h6,.h6 {
+            font-size: 17px;
+            
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        small {
+            font-size: 13.33px;
+        }
+
+        /* .bg-pink {
+          background: rgb(255,42,148);
+background: -moz-linear-gradient(0deg, rgba(255,42,148,1) 0%, rgba(255,105,180,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(255,42,148,1) 0%, rgba(255,105,180,1) 100%);
+background: linear-gradient(0deg, rgba(255,42,148,1) 0%, rgba(255,105,180,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endColorstr="#ff69b4",GradientType=1);
+        } */
+
+        .bg-pink{
+          background-color: var(--cor1);
+        }
+
+        .text-pink {
+          color: #ff69b4;
+        }
+
+        .nav-link{
+          color: #000;
+          
+        }
+        h1,h2,h3,h4,h5,h6{margin-top: 0;}
+        .btn{
+          /* background: rgb(255,42,148);
+background: -moz-linear-gradient(0deg, rgba(255,42,148,1) 0%, rgba(255,105,180,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(255,42,148,1) 0%, rgba(255,105,180,1) 100%);
+background: linear-gradient(0deg, rgba(255,42,148,1) 0%, rgba(255,105,180,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endColorstr="#ff69b4",GradientType=1); */
+          background-color: transparent;
+          border: 1px solid;
+          border-radius: 30px;
+          display: flex;
+          gap: .5rem;
+          padding: .8rem 2rem;
+          color: var(--cor1);
+          font-weight: bold;
+          align-items: center;
+          line-height: initial;
+          width: fit-content;
+          transition: all .3s ease-in-out;
+        }
+        .btn:hover{
+          scale: 1.1;
+          color: #fff;
+          background: var(--cor1);
+        }
+        .nav{
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        .social{
+          color: #fff;
+          font-size: 22px;
+          display: flex;
+          height: 46px;width: 46px;border-radius: 50%;
+          text-decoration: none;
+          justify-content: center;
+          align-items: center;
+        }
+        footer{border-top: 1px solid #ccc;}
+        
+        body{overflow-x: hidden;}
+        .box{padding: 3rem;
+          box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+          border-radius:        30px;
+          background: var(--cor2);
+          box-shadow: 2rem 2rem 0 var(--cor1);
+          border-radius: 0;
+          margin: 3rem;
+        }
+        .box p{line-height: 28px;}
+        .box h3{
+          font-family: 'EB Garamond', serif;
+          text-transform: Capitalize;
+          margin-bottom: 1rem;
+        }
+        .box img{
+          margin-top: calc(-3rem - 50px);
+          border: 3px solid #ff69b4;
+          border-radius:50%;
+        }
+        body{color: #131313;}
+        .bg{background: var(--cor2);}
+        :root{
+          --cor2:#e9c1c8;
+          --cor1:#17453f;
+        }
+        #quem-sou  h2,
+        #inicio h1{color:var(--cor1);}
+        #inicio p{
+          font-size: 22px;
+          color: var(--cor1);
+        }
+        #quem-sou h2 b,
+        #formulario h2 b,
+        #inicio h1 b{
+          background: var(--cor1);
+          font-weight: normal;
+          line-height: initial;
+          color: #fff;
+          padding: 0;
+          display: inline-block;
+
+        }
+        #formulario button{
+          font-size: 20px;
+          margin: 2rem auto 0 auto;
+          padding: 1rem 4rem;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          
+        }
+        #formulario input,
+        #formulario textarea{
+          border: 0;
+          border-radius: 0;
+          padding: 1rem;
+        }
+        
+        #quem-sou img,
+        #inicio img{
+          box-shadow: 3rem 3rem 0px var(--cor1);
+        }
+        #quem-sou p{font-weight: bold;font-size: 16px;}
+        #quem-sou p,
+        #quem-sou ul{
+          color: var(--cor1);
+        }
+        #quem-sou ul{
+          list-style: circle;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 0;
+          margin-left: 1.5rem;
+        }
+
+        .bg-light{background-color: #e8e3d7!important;}
+        .bg-light {
+          color: var(--cor1);
+        }
+
+        #atendimento ul{}
+        #atendimento ul{
+          list-style:circle;
+          text-align: left;
+          font-size: 28px;
+          font-family: 'EB Garamond', serif;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="p-2">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                    <img src="./assets/logo_celia_ok.svg" alt="Logotipo" class="img-fluid">
+                </div>
+                <div class="col-auto">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#inicio" class="nav-link h6">Início</a></li>
+                        <li class="nav-item"><a href="#atendimento" class="nav-link h6">Atendimento</a></li>
+                        <li class="nav-item"><a href="#quem-sou" class="nav-link h6">Quem Sou</a></li>
+                        <li class="nav-item"><a href="https://wa.me/5511984534413?text=Olá! Gostaria de agendar uma sessão de terapia." target="_blank" class="nav-link h6 btn bg-pink"><i class="fa fa-whatsapp"></i>Agendar Horário</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sessão Início -->
+    <section id="inicio">
+      <div class="container-fluid px-0 bg">
+        <div class="row m-0 align-items-center">
+          <div class="col-md-6 p-5">
+            <div class="p-5">
+              <h1>Prazer, sou  <b>Célia Rodrigues</b>!</h1>
+              <p>Sou psicóloga clínica e estou aqui para auxilia-lo rumo a uma vida mais saudável.</p>
+             
+                <a href="" class="btn mt-5">Quero saber mais!</a>
+            </div>
+          </div>
+          <div class="col-md-6 p-5">
+            <div class="p-5">
+              <img src="./assets/foto_entrada.jpg" class="w-100"/>
+            </div>
+            
+          </div>
+      </div>
+      </div>  
+      
+    </section>
+
+    <!-- Sessão Atendimento -->
+    <section id="atendimento" class="py-5 bg-light" >
+        <div class="text-center container py-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+              <h2 class="font-weight-bold">Como posso te ajudar</h2>
+              <p>Trabalho com uma abordagem comprovada pela ciência para ajudar meus pacientes a lidarem com problemas emocionais e transtornos mentais: a terapia cognitivo-comportamental.</p>
+          
+            </div>
+          </div>
+           </div>
+        <div class="row justify-content-center align-items-center mb-5">
+            <div class="col-md-5 text-center">
+              <div class="box">
+                <h3 class="font-weight-bold">Atendimento clínico</h3>
+                <p>Atendimento para pacientes que apresentam problemas emocionais, transtornos mentais e demandas do dia-a-dia como dificuldades em relacionamentos, insegurança, perfeccionismo, procrastinação, entre outros.</p>
+              </div>
+            </div>
+            <div class="col-md-5  px-5 ">
+              <div class="mx-5">
+                <ul class="list-unstyled m-0">
+                  <li>Atendimento semanal</li>
+                  <li>Adultos a partir dos 18 anos</li>
+                  <li>50 minutos por sessão</li>
+                  <li>Atendimento particular</li>
+                  <li>Modalidade online</li>
+                </ul>
+              </div>              
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Quem Sou -->
+    <section id="quem-sou" class="container-fluid bg">
+        <div class="row align-items-center">
+            <div class="col-md-6 p-5">
+              <div class="p-5">
+                <img src="./assets/foto_saida_2.jpg" alt="Imagem" class="img-fluid w-100">
+              </div>
+            </div>
+            <div class="col-md-6 p-5">
+              <div class="p-5">
+                <h2 class="h1"><b>Quem sou</b></h2>
+                
+                <ul class="list-unstyled mt-5">
+                    <li class="h5 mb-3">Psicóloga desde 2013 pela Universidade Paulista</li>
+                    <li class="h5 mb-3">Formação em Terapia Cognitivo Comportamental - TCC</li>
+                    <li class="h5 mb-3">Formação em Obesidade e Emagrecimento (tratamento com base na TCC)</li>
+                    <li class="h5 mb-3">Pós-Graduanda em Psicopatologia (Transtornos Mentais)</li>
+                </ul>
+                <a href="https://wa.me/5511984534413?text=Olá! Gostaria de agendar uma sessão de terapia." target="_blank" class="btn btn-pink mt-4"><i class="fa fa-whatsapp"></i>Agendar uma sessão</a>
+              </div>
+              
+            </div>
+        </div>
+    </section>
+
+       <!-- Sessão Formulário -->
+       <section id="formulario" class="bg-light" >
+        <div class="container py-5 ">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center shadow-panel rounded p-4">
+                <h2 class="font-weight-bold">Entre em <b>Contato</b></h2>
+                <p class="h5 mb-5">Entre em contato para agendar um atendimento ou tirar suas dúvidas.</p>
+                <form id="contact-form">
+                    <div class="mb-3">
+                        <input type="text" name="from_name" class="form-control rounded-input" placeholder="Nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="from_mail" class="form-control rounded-input" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="from_phone"  class="form-control rounded-input" placeholder="WhatsApp" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="from_message" class="form-control rounded-input" rows="4" placeholder="Mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-pink rounded-button"><i class="fa fa-envelope"></i>Enviar</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-md-3">
+                  <img src="./assets/logo_celia_ok.svg" alt="Logotipo" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-center d-flex justify-content-center flex-column align-items-center">
+                    <h4 class="h5">Faça um agendamento</h4>
+                    <p>Agende sua consulta agora mesmo!</p>
+                    <a href="https://wa.me/5511984534413?text=Olá! Gostaria de agendar uma sessão de terapia." target="_blank" class="btn btn-outline-light mt-3"><i class="fa fa-whatsapp"></i>Agende sua consulta</a>
+                </div>
+                <div class="col-md-3 text-center d-flex justify-content-center flex-column align-items-center">
+                    <h4 class="h5">Me siga no instagram</h4>
+                    <div class="mt-2">
+                        <a href="#" class="social bg-pink me-2"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS e Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script type="text/javascript">
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          const serviceID = 'service_2bt7emw'; // Substitua "YOUR_SERVICE_ID" pelo seu service ID do EmailJS
+          const templateID = 'template_0w7jd3k'; // Substitua "YOUR_TEMPLATE_ID" pelo seu template ID do EmailJS
+
+          emailjs.sendForm(serviceID, templateID, this)
+              .then(function(response) {
+                  console.log('E-mail enviado com sucesso!', response.status, response.text);
+                  alert('Sua mensagem foi enviada! Em breve entrarei em contato.');
+                  document.getElementById('contact-form').reset();
+              }, function(error) {
+                  console.error('Erro ao enviar e-mail:', error);
+              });
+      });
+    </script>
+</body>
+</html>
