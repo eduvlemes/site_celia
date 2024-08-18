@@ -227,7 +227,47 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endCo
           gap: 1rem;
         }
 
-        
+        @media(max-width:990px){
+          body header img.img-fluid{
+            height: 80px;
+            margin: 0 auto;
+            display: block;
+          }
+          header{box-shadow:0px 0px 0px;position:relative;top:0;left:0;width:100%}
+          
+          ul.nav.mobile-menu{box-shadow: 5px 3px 5px rgba(0, 0, 0, .1);
+            gap: 15px;justify-content: space-between;display:flex;background:#fff}
+          .mobile-menu.nav.mobile-menu li{}
+          .mobile-menu.nav li a{font-size: 14px;margin: 0;}
+          .mobile-menu{position:sticky;top:0}
+
+          h1{font-size: 38px;}
+          #formulario p.h5,
+          #inicio p{font-size: 18px;}
+          #quem-sou img, #inicio img{
+            box-shadow: 1rem 1rem 0px var(--cor1);
+          }
+          #quem-sou h2 b,h2{font-size: 32px;}
+          .box{
+            margin: 2rem;
+            box-shadow: 1rem 1rem;
+            padding: 2rem;
+          }
+          .box h3{font-size:26px}
+          .box p{font-size:14px}
+          
+          #quem-sou ul{
+            font-size: 22px;
+            margin-bottom: 2rem;
+          }
+          #quem-sou ul *{font-size: 16px;margin:0!important}
+          #atendimento ul{
+            font-size: 22px;
+            padding: 2rem 0 0 4rem;
+            margin: 0;
+          }
+          .btn{margin:0 auto}
+        }
     </style>
 </head>
 <body>
@@ -236,10 +276,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endCo
     <header class="p-2">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-auto">
+                <div class="col-md-auto col-12">
                     <img src="./assets/logo_celia_ok.svg" alt="Logotipo" class="img-fluid">
                 </div>
-                <div class="col-auto">
+                <div class="col-md-auto col-12 d-none d-md-block">
                     <ul class="nav">
                         <li class="nav-item"><a href="#inicio" class="nav-link h6">Início</a></li>
                         <li class="nav-item"><a href="#atendimento" class="nav-link h6">Atendimento</a></li>
@@ -250,50 +290,55 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endCo
             </div>
         </div>
     </header>
-
+    <ul class="nav d-flex p-2 d-md-none mobile-menu">
+      <li class="nav-item"><a href="#inicio" class="nav-link h6">Início</a></li>
+      <li class="nav-item"><a href="#atendimento" class="nav-link h6">Atendimento</a></li>
+      <li class="nav-item"><a href="#quem-sou" class="nav-link h6">Quem Sou</a></li>
+    </ul>
     <!-- Sessão Início -->
     <section id="inicio">
       <div class="container-fluid px-0 bg">
         <div class="row m-0 align-items-center">
-          <div class="col-md-6 p-5">
-            <div class="p-5">
-              <h1>Prazer, sou  <b>Célia Rodrigues</b>!</h1>
-              <p>Sou psicóloga clínica e estou aqui para auxilia-lo rumo a uma vida mais saudável.</p>
-             
-                <a href="" class="btn mt-5">Quero saber mais!</a>
-            </div>
-          </div>
-          <div class="col-md-6 p-5">
-            <div class="p-5">
+          <div class="col-md-6 p-5 order-md-last">
+            <div class="p-md-5">
               <img src="./assets/foto_entrada.jpg" class="w-100"/>
             </div>
             
           </div>
+          <div class="col-md-6 p-md-5">
+            <div class="p-md-5 p-3 ">
+              <h1>Prazer, sou  <b>Célia Rodrigues</b>!</h1>
+              <p>Sou psicóloga clínica e estou aqui para auxilia-lo rumo a uma vida mais saudável.</p>
+             
+                <a href="" class="btn mt-md-5 mt-4 mb-3">Quero saber mais!</a>
+            </div>
+          </div>
+          
       </div>
       </div>  
       
     </section>
 
     <!-- Sessão Atendimento -->
-    <section id="atendimento" class="py-5 bg-light" >
-        <div class="text-center container py-5">
+    <section id="atendimento" class="py-md-5 bg-light" >
+        <div class="text-center container py-md-5 py-4">
           <div class="row justify-content-center">
             <div class="col-12 col-md-8">
               <h2 class="font-weight-bold">Como posso te ajudar</h2>
-              <p>Trabalho com uma abordagem comprovada pela ciência para ajudar meus pacientes a lidarem com problemas emocionais e transtornos mentais: a terapia cognitivo-comportamental.</p>
+              <p class="px-md-0 px-3">Eu utilizo a Terapia Cognitivo-Comportamental (TCC), uma abordagem da psicologia com eficácia comprovada cientificamente, para ajudar meus pacientes a lidarem com problemas emocionais e transtornos mentais</p>
           
             </div>
           </div>
-           </div>
-        <div class="row justify-content-center align-items-center mb-5">
+           
+        <div class="row justify-content-center align-items-center mb-md-5">
             <div class="col-md-5 text-center">
               <div class="box">
                 <h3 class="font-weight-bold">Atendimento clínico</h3>
                 <p>Atendimento para pacientes que apresentam problemas emocionais, transtornos mentais e demandas do dia-a-dia como dificuldades em relacionamentos, insegurança, perfeccionismo, procrastinação, entre outros.</p>
               </div>
             </div>
-            <div class="col-md-5  px-5 ">
-              <div class="mx-5">
+            <div class="col-md-5  px-md-5 ">
+              <div class="mx-md-5">
                 <ul class="list-unstyled m-0">
                   <li>Atendimento semanal</li>
                   <li>Adultos a partir dos 18 anos</li>
@@ -304,21 +349,22 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endCo
               </div>              
             </div>
         </div>
+      </div>
     </section>
 
     <!-- Sessão Quem Sou -->
     <section id="quem-sou" class="container-fluid bg">
         <div class="row align-items-center">
-            <div class="col-md-6 p-5">
-              <div class="p-5">
+            <div class="col-md-6 p-md-5 p-3">
+              <div class="p-md-5 p-4">
                 <img src="./assets/foto_saida_2.jpg" alt="Imagem" class="img-fluid w-100">
               </div>
             </div>
-            <div class="col-md-6 p-5">
-              <div class="p-5">
+            <div class="col-md-6 p-md-5 px-4 pb-5">
+              <div class="p-md-5 px-4">
                 <h2 class="h1"><b>Quem sou</b></h2>
                 
-                <ul class="list-unstyled mt-5">
+                <ul class="list-unstyled mt-md-5 mt-3">
                     <li class="h5 mb-3">Psicóloga desde 2013 pela Universidade Paulista</li>
                     <li class="h5 mb-3">Formação em Terapia Cognitivo Comportamental - TCC</li>
                     <li class="h5 mb-3">Formação em Obesidade e Emagrecimento (tratamento com base na TCC)</li>
@@ -333,7 +379,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endCo
 
        <!-- Sessão Formulário -->
        <section id="formulario" class="bg-light" >
-        <div class="container py-5 ">
+        <div class="container py-md-5 py-3">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center shadow-panel rounded p-4">
                 <h2 class="font-weight-bold">Entre em <b>Contato</b></h2>
@@ -362,10 +408,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endCo
     <footer class="py-5">
         <div class="container">
             <div class="row align-items-start">
-                <div class="col-md-3">
+                <div class="col-md-3 d-none d-md-block">
                   <img src="./assets/logo_celia_ok.svg" alt="Logotipo" class="img-fluid">
                 </div>
-                <div class="col-md-6 text-center d-flex justify-content-center flex-column align-items-center">
+                <div class="col-md-6 text-center d-flex justify-content-center flex-column align-items-center mb-md-0 mb-5">
                     <h4 class="h5">Faça um agendamento</h4>
                     <p>Agende sua consulta agora mesmo!</p>
                     <a href="https://wa.me/5511984534413?text=Olá! Gostaria de agendar uma sessão de terapia." target="_blank" class="btn btn-outline-light mt-3"><i class="fa fa-whatsapp"></i>Agende sua consulta</a>
@@ -373,7 +419,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a94",endCo
                 <div class="col-md-3 text-center d-flex justify-content-center flex-column align-items-center">
                     <h4 class="h5">Me siga no instagram</h4>
                     <div class="mt-2">
-                        <a href="#" class="social bg-pink me-2"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/celiarodrigues.psi/" target="_blank" class="social bg-pink me-2"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
